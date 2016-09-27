@@ -57,4 +57,43 @@ public class Complejos {
 		
 	}
 	
+	
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime
+				* result
+				+ ((numeroImaginario == null) ? 0 : numeroImaginario.hashCode());
+		result = prime * result
+				+ ((numeroReal == null) ? 0 : numeroReal.hashCode());
+		return result;
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Complejos other = (Complejos) obj;
+		if (numeroImaginario == null) {
+			if (other.numeroImaginario != null)
+				return false;
+		} else if (!numeroImaginario.equals(other.numeroImaginario))
+			return false;
+		if (numeroReal == null) {
+			if (other.numeroReal != null)
+				return false;
+		} else if (!numeroReal.equals(other.numeroReal))
+			return false;
+		return true;
+	}
+	
+	
+	
 }
