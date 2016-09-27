@@ -69,4 +69,26 @@ public class ComplejosTest {
 	
 	
 	*/
+	
+		
+	@SuppressWarnings("deprecation")
+	@Test
+	public void queDosNumerosComplejosIgualesSeanIguales(){
+		Complejos c1 = new Complejos (1.0,1.0);
+		Complejos c2 = new Complejos (1.0,1.0);
+		
+		Assert.assertTrue(c1.equals(c2));
+		
+	}
+	
+	@SuppressWarnings("deprecation")
+	@Test
+	public void queDosNumerosComplejosDiferentesSeanDiferentes(){
+		Complejos c1 = new Complejos (2.0,1.0);
+		Complejos c2 = new Complejos (1.0,2.0);
+		
+		Assert.assertFalse(c1.equals(c2));
+		
+	}
+	
 }
